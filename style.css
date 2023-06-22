@@ -1,400 +1,678 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;}
-
-h1, h2, h3, h4, h5, h6, p{
-    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+   
 }
 
 ul{
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 li{
-    list-style: none;
+    list-style-type: none;
 }
 
 a{
     text-decoration: none;
 }
 
-Body{
-   background-color: hsl(0, 11%, 9%);
-   color: #fff;
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
 }
 
-.header__inner .scroll {
-    padding: 15px 11%;
-    border-bottom: 1px solid hsl(0, 33%, 89%);
+h2 {
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 92px;
 }
 
+h4{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 26px;
+}
+
+p, li{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+body{
+    background:#000;
+}
+
+.container{
+    width: 100%;
+    max-width: 1420px;
+    /* margin: 0 250px; */
+}
+/* header__section start here */
+.header__section{
+   padding-top: 45px;
+}
 .header__inner {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     right: 0;
     z-index: 1000;
-    width: 100%;
-    background: rgba(27, 26, 26, 0.945);
-    padding: 24px 20px;
+  
+    /* padding-top: 45px ; */
+    padding: 20px 0px;
     border-bottom: 1px solid transparent;
     transition: all ease .50s;
 }
 
-.header__logo a{
-    font-size: 36px;
-    color: #fff;
-    font-weight: 700;
-}
-
-.header__logo span{
-    color: #d2691e;
-}
-
-.menu ul li a {
-    font-size: 24px;
-    color: #fff;
+.menu a{
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 80px;
     font-weight: 500;
-    margin: 0 20px;
-    transition: all ease .40s;
+    line-height: 28px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all ease 0.5s;
+}
+.menu a.active{
+    color: #001BFF;
+    font-size: 18px;
 }
 
-.menu ul li .active{
-    color: #d2691e ;
+.menu a:hover{
+    color: #001BFF;
 }
-
-.menu ul li a:hover{
-  color: #d2691e;
-}
-
-.header__icon svg{
-    font-size: 30px;
+.menuIcon svg{
+    font-size: 20px;
     color: #fff;
-    display: none;
-}
 
-/* hero__section start here */
-.hero__section{
-    padding: 120px 19% 100px;
 }
-
-.hero__section {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(./IMAGE/banner.jpg);
-    background-size: cover;
-    background-position:center ;
-    align-items: center;
-    justify-content: flex-start;
+.header__icon{
+    padding-right: 17px;
 }
-
-.hero__text h3{
+.header__icon a{
+    font-family: Montserrat;
     color: #fff;
-    font-size: 22px;
+    padding: 12px 40px;
+    display: inline-block;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
-    word-spacing: 10px;
+    border: 2px solid #fff;
+    transition: all ease .5s;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
-.hero__text h1{
-    font-family: 'Dosis', sans-serif;
-    font-size: 42px;
-    color: #fff;
-    font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+
+.header__icon a:hover{
+    transform: scale(1.1);
+    color:#fff;
+    background:#001BFF ;
+    /* background-color: #fff; */
 }
 
-.hero__text h4{
+.mobile__menu {
+    width: 100%;
+    background: #0e0e15f8;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    transform: scaleX(0);
+    transition: 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.show{
+    transform: scaleX(1);
+}
+
+.mobile__menu svg {
+    font-size: 20px;
+}   
+
+.mobile__menu ul li a {
+    font-size: 20px;
     color: #fff;
+}
+
+.mobile__menu ul li a:hover{
+    
+    transform: scale(1.1);
+}
+
+.mobile__menu ul li {
+    margin-bottom: 28px;
+    cursor: pointer;
+}
+
+.menuHead svg {
+    cursor: pointer;
+    color: #fff;
+}
+@media screen and (max-width: 575px) {
+    .mobile__menu{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .mobile__menu{
+        width: 100%;
+    }
+}
+
+
+/* header__section end  here */
+
+/* banner section start here */
+.header__section{
+    position: relative;
+}
+
+.banner__content h1{
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 90px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin:214px 0 30px 0 ;
+    color: #fff;
+}
+
+.banner__content p{
+    font-family: Montserrat;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 40px;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 60px;
+    color: #ffffff;
 }
 
 .btns a{
+    font-family: Montserrat;
+    color: #fff;
+    background-color: #001BFF;
+    padding: 20px 50px;
     display: inline-block;
-    padding:  16px 45px;
-    font-size: 18px;
+    font-size: 20px;
+    border-radius: 45px;
     font-weight: 600;
-    color: #b17878;
-    border-radius: 10px;
-    background-color: #22c58c;
-    bottom: 2px  #180e07 solid;
-    transition: all ease 0.50s;
+    border: 2px solid #fff;
+    transition: all ease .5s;
+    cursor: pointer;
 }
 
 .btns a:hover{
-    transform: translate(5px);
-    background: #fff;
-    color: #c5225b;
+    transform: scale(1.1);
+    color:#001BFF;
+    background:#fff;
+    border: 3px solid #001BFF ;
 }
 
-/* hero__section end here */
-
-/* about__section start here */
-.about__inner {
-    margin-top: 60px;
+.banner__image img {
+    width: 734px;
+    height: 734px;
+    margin:80px 0 200px 0;
 }
 
-.about__image img {
-    width: 397px;
-    height: 397px;
+/* banner section end here */
+
+/* three__bar section start here */
+.three__inner h2{
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.three__inner p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+.swiper-slide{
+    width: 460px;
+    height: 551px;
+    background: #141414;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.swiper-slide img{
+    margin: 52px 112px 30px 112px;
+}
+
+.sceond__img img{
+    margin: 83px 132px 83px 132px ;
+}
+
+.swiper-slide h3{
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+
+}
+
+.swiper-slide p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.swiper-slide p::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color:#001BFF;
+    width: 91px;
+    height: 2px;
+    margin:0 180px;
+    box-sizing: border-box;
+    
+    
    
 }
+/* three__bar section end here */
 
-.about__text h2{
-    font-size: 32px;
-    font-weight: 800;
-    margin: 0 auto;
-    font-family: 'Dosis', sans-serif;
-    margin-bottom: 15px;
+/* group section css start */
+
+.group__image img{
+    width: 646px;
+    height: 782px;
+    margin-top: 200px;
+}
+.group__content {
+    margin-left: 45px;
+}
+.group__content h2{
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin-top: 230px;
 }
 
-.about__text h5 {
+.group__content p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 30px 0;
+    color: #fff;
+}
+
+.mini_text h1{
+    font-family: Kdam Thmor Pro;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 73px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #001BFF;
+}
+.mini_content{
+    margin-left: 43px;
+}
+.mini_content h3{
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
+.mini_content p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.group__fotter p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 60px;
+    color: #fff;
+}
+/* group section css end */
+
+/* owl secton start css */
+.owl__inner {
+    margin-top: 200px;
+}
+.text--bar h2{
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+.owl__inner_bar{
+   margin: 70px 0 0 0;
+}
+
+.item {
+    width: 361px;
+    height: 463px;
+    background: #141414dc;
+    margin-right: 30px;
+    }
+
+.owl-item img{
+    width: 204px !important;
+    height: 161px !important;
+    
+}
+
+.items h4{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+
+}
+.items p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 29px;
+}
+/* .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    display: none;
+} */
+/* lock section start css */
+.lock__inner{
+    margin: 100px 0 200px;
+}
+.lock__image img{
+    width: 486px;
+    height: 488px;
+    margin: 125px 0 136px; 
+}
+
+.lock__text h2{
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 200px 0 30px ;
+    color: #fff;
+}
+
+.lock__text p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin: 0 0 60px ;
+}
+
+/* lock section end css */
+
+/*  profile section start css */
+.profile__inner h2{
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    }
+.profile__inner p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 73px;
+    color: #fff;
+} 
+
+.profile__bar {
+    width: 406px;
+    height: 470px;
+    margin-right: 100px;
+}
+.profile__bar:last-child{
+    margin-right: 0;
+}
+.profile__bar img {
+    width: 232px;
+    height: 232px;
+    margin: 0 87px 41px 87px;
+}
+
+.profile__bar p{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.profile__bar h4{
+    font-family: Montserrat;
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: 15px;
-    font-family: 'Dosis', sans-serif;
-}
-
-.about__text span {
-    color: #bf4f4ff9;
-}
-
-.about__text p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 30px;
-    margin-bottom: 30px;
-    color: grey;
-}
-
-/* about__section end here */
-
-/* services__section start here */
-.services__inner{
-    padding: 40px 0;
-}
-
-.services {
+    line-height: 37px;
+    letter-spacing: 0em;
     text-align: center;
-}
-
-.services h2 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    font-family: 'Dosis', sans-serif;
-}
-
-.services h4{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    font-family: 'Dosis', sans-serif;
-}
-
-.services__items{
-    padding: 22px 18px;
-    background-color: #180e07e7;
-    border-radius: 15px;
-    border: 1px solid rgb(170, 37, 66);
-    cursor: pointer;
-    margin: 20px 15px;
-    transition: all ease .50s;
-}
-
-.services__items h3{
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.services__items svg{
-    font-size: 32px;
-    color: #c5225b;
-    margin-bottom: 20px;
-}
-
-.services__items p{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26px;
-    margin-bottom: 20px;
-    color: grey;
-}
-
-.btnss a{
-    display: inline-block;
-    padding:  8px 22px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #dbc7c7;
-    border-radius: 10px;
-    background-color: #c5225b;
-    bottom: 2px  #edb084 solid;
-    transition: all ease .50s;
-}
-
-.btnss a:hover{
-    transform: scale(1.1);
-    background-color: #dbc7c7 ;
-    color: #c5225b;
-    border: 2px solid  #c5225b;
-}
-
-.services__items:hover{
-    transform: translateY(-8px);
-    border: 1px solid #c5225b ;
-}
-
-/* services__section end here */
-
-/* contact section start here */
-.contact__inner{
-    margin: 40px 0;
-}
-
-.contact__icons{
-    padding: 20px 16px;
-}
-
-.icons-1 svg{
-    font-size: 42px;
-    color: #783049;
-    font-weight: 600;
-    margin-bottom: 15px;
-    transition: all ease .50s;
-}
-
-.icons-1 svg:hover{
-    color: #c5225b;
-    font-weight: 700;
-    font-size: 46px;
-}
-
-.icons-1 h4{
-    font-size: 28px;
-    font-weight: 600;
-}
-
-.contact__info{
-    padding:20px 16px;
-}
-
-.contact__info h2 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    font-family: 'Dosis', sans-serif;
-}
-
-.contact__info a{
-    display: inline-block;
-    padding:  8px 22px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #dbc7c7;
-    border-radius: 10px;
-    background-color: #c5225b;
-    bottom: 2px solid #fff;
-    transition: all ease .50s;
-    margin-bottom: 20px;
-}
-
-.contact__info a:hover{
-    /* transform: translateY(7px); */
-    transform: scale(1.1);
-    color:#c5225b ;
-    background-color: #fff;
-    border-bottom: 2px solid #c5225b;
-}
-
-.contact__info p{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 28px;
-    color: grey;
-}
-/* contact section end here */
-
-/* fotter__section start here */
-.fotter__inner{
-    padding: 80px 18% 70px;
-
-}
-.fotter__text h3{
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    font-family: 'Dosis', sans-serif;
-}
-
-.fotter__text p{
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 28px;
-    color: grey;
-    margin-bottom: 15px;
-}
-
-.fotter__icons a svg{
-    height: 20px;
-    width: 20px;
-    font-size: 20px;
-    line-height: 40px;
+    margin-bottom: 5px;
     color: #fff;
-    background-color: #c5225b;
-    border: 2px solid #22c58c;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 9px;
-    transition: all ease .50s;
-    padding: 7px;
 }
 
-.fotter__icons a svg:hover{
-    transform: translateY(-5px);
-    background-color: #180e07;
-    border: 2px solid orangered;
-}
-
-/* fotter__section end here */
-
-/* scroll btn start */
-.scroll-btn svg{
-    position: fixed;
-    right: 12px;
-    bottom: 12px;
-    color: #c5225b;
-    background-color: #dbc7c7;
-    font-size: 12px;
-    padding: 5px;
-    border-radius: 15px;
-}
-/* scroll btn end */
-
-/* @media(max-width:1600px){
-    .header__inner{
-        padding: 14px 4%;
-    }
-    section{
-        padding: 100px 5% 80px;
-    }
+.profile__bar h6{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+/* margin-bottom: 200px; */
 }
 
 
-@media(max-width:1200px){
-    .header__inner{
-        padding: 14px 4%;
-    }
-    section{
-        padding: 100px 5% 80px;
-    }
-} */
+
+/*  profile section end css */
+
+/* slidebar section start css  */
+.slide__section {
+    margin-top: 200px;
+}
+
+.owl-item img{
+    height: 419px !important;
+    width: 317px !important;
+    margin-right: 50px;
+}
+
+.owl-item img:last-child{
+    margin-right: 0;
+}
+
+.slide__bar {
+    margin-bottom: 70px;
+}
+.text__bar h2{
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.text__bar P{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+/* slidebar section end css  */
+
+/* footer section start css */
+
+.footer__section{
+    margin-top: 200px;
+}
+
+.footer__inner {
+    margin: 69px 0 36px;
+}
+
+.footer__logo img {
+    width: 171px;
+    height: 42px;
+    margin-bottom: 15px;
+}
+
+.footer__logo p{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.footer__content h5{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+
+.footer__content li {
+    margin-bottom: 18px;
+}
+.footer__content li a{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer__icon h5{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer__icon a {
+    width: 28px;
+    height: 28px;
+    background: #202020;
+    margin-right: 16px;
+    border-radius: 4px;
+    padding: 6px 
+}
+
+.footer__icon a svg{
+    color: #fff;
+    /* font-size: 16px; */
+    /* padding: 6px  */
+    
+}
+
+.footer__low {
+   border-top: 1px solid #202020 ;
+}
+
+.footer__low p {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    margin: 28px 0 76px;
+}
+.footer__low p span{
+    color: #1649FF;
+}
+/* footer section end css */
